@@ -4,17 +4,24 @@
   "description": "Api for Employee Performance Evaluation and Management System",
   "main": "index.js",
   "scripts": {
+    "build": "rimraf dist && npx tsc",
+    "prestart": "npm run build",
+    "start": "node dist/index.js",
+    "preserve": "npm run build",
+    "serve": "concurrently \"npx tsc -w\"  \"nodemon dist/index.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jon Rey L. Lumayag",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "concurrently": "^8.2.2",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.6.5",
+    "rimraf": "^5.0.5",
     "sequelize": "^6.35.1"
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-import { bootstrap } from "server";
+import { bootstrap } from "sever";
 import dotenv from "dotenv";
 
 dotenv.config();
